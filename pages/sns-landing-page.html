@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    Landing Page | Personal Project
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../css/site-styles.css">
+  <script type="text/javascript" src="../js/main-js.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:700" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="main wrapper">
+<header>
+  <div class="logo">
+  <a href="../index.html" class="logo" title="UI/UX designer developer">KBD</a>
+  </div>  
+  <nav class="topnav" id="myTopnav">
+  <a href="../index.html" id="fixed-red" class="navLinks-pink red-active"  title="view about me">ABOUT</a>
+  <a href="../index.html" id="fixed-green" class="navLinks-pink" title="view portfolio">PORTFOLIO</a>
+  <a href="../index.html" id="fixed-blue" class="navLinks-pink" title="view contact info">CONTACT</a>
+  <a href="javascript:void(0);"  class="icon" onclick="navMob()">
+    <div class="container" onclick="hamMenu(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+      </a>
+  </nav>
+</header>
+  <div class="container-wrap projectPage" id="red">
+    <div class="col-50">
+    <div class="text">
+     <h1>Landing Page</h1>     
+     <p>Fictional Shipping company that offers affordable rates  </p>
+     <h2>The Challenge</h2>
+     <p>Create original content for a landing page</p>
+     <h2>My role </h2>
+     <p>concept, wireframe, code</p>
+        
+      <a href="#green">
+        <button class="anim-button" style="margin-right: 25px;"><span>Landing process</span> </button>
+      </a>      
+      </div>
+  </div>
+  <div class="col-50 introImg snsImg">
+  </div>
+  </div>
+
+  <div  id="green">
+    
+
+    <div class="imgCntr row">    
+      <h2>Project Goals</h2> 
+      <div class="goalsWrapper">
+      <div class="goalNumber num1">1</div>
+      <div class="goalNumber num2">2</div>
+      <div class="goalNumber num3">3</div>
+      <div class="goalNumber num4">4</div>  
+      <p class="numText1">Come up with cool and original concept <br> to sell a product</p>
+      <p class="numText2">Create a visually pleasing experience</p>         
+      <p class="numText3">Write a fun copy</p>     
+      <p class="numText4">Code</p>    
+      </div> 
+      <p class="para50"></p> 
+    </div>
+    <div class="row pinkBg imgCntr">        
+        <img src="../images/sns-journey.jpg" alt="user journey">
+     </div>
+     
+
+     <div class="projectWrapper ">
+     <div class="textWrap">
+      <h2>Star Wars Theme</h2>     
+      <p>I decided to use my love for Star Wars films and incorporate it into my designs. Found great artwork by Justas Galaburda on Dribble.</p>
+      <p>Since one of my favorite characters' was running a "delivery service", I decided to use his famous Kessel Run for the copy. </p>
+     </div>
+     <div class="imgCntr">
+      <img class="img75 " src="../images/sns-landing-dskt.jpg" alt="Ship'N'Save Landing">      
+     </div>    
+    </div>
+
+
+ 
+      
+ 
+ 
+  <div class="projectWrapperLast pinkBg" >
+    <div class="prototype">
+      <h2>Simple, Clean, Color Coordinated </h2>
+      <p>check code <a target="_blank" href="https://codepen.io/katia2378/pen/xJEXjz">on codepen</a></p>
+    <img class="img75 imgShadow" src="../images/sns-pricing-dskt.jpg" alt="Ship'N'Save Landingt">
+    </div>
+    <div class="nextProject">
+      <p>Next Project</p>
+      <a href="mk-lookbook.html" class="next-project pulse">Mackage - Online Lookbook> </a>
+    </div>
+  </div>
+  <footer>
+    <h6>Copyright @KatiaByDesign 2018</h6>
+  </footer>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    //onclick event
+    $("a").on('click', function(event){
+      if(this.hash !== ""){
+        //prevent default
+        event.preventDefault();
+        //create an object
+        var hash = this.hash;
+        //animate with jquery
+        $('html, body').animate({
+          scrollTop:$(hash).offset().top
+        }, 800, function(){
+          window.location.hash = hash;        
+        });
+      }
+    });
+  });
+</script>
+<script type="text/javascript">
+  $.fn.isInViewport = function() {
+  var elementTop = $(this).offset().top;
+  var elementBottom = elementTop + $(this).outerHeight();
+
+  var viewportTop = $(window).scrollTop();
+  var viewportBottom = viewportTop + $(window).height();
+
+  return elementBottom > viewportTop && elementTop < viewportBottom;
+};
+
+$(window).on('resize scroll', function() {
+  $('.container-wrap').each(function() {
+      var activeColor = $(this).attr('id');
+    if ($(this).isInViewport()) {
+      $('#fixed-' + activeColor).addClass(activeColor + '-active');
+    } else {
+      $('#fixed-' + activeColor).removeClass(activeColor + '-active');
+    }
+  });
+});
+</script>
+</body>
+</html>

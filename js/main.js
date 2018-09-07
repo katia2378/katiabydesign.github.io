@@ -9,3 +9,4 @@ function myFunction() {
 	function hamMenu(x) {
     x.classList.toggle("change");
 }
+

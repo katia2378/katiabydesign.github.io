@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    Online Lookbook | MACKAGE
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../css/site-styles.css">
+  <script type="text/javascript" src="../js/main-js.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:700" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="main wrapper">
+<header>
+  <div class="logo">
+  <a href="../index.html" class="logo" title="UI/UX designer developer">KBD</a>
+  </div>  
+  <nav class="topnav" id="myTopnav">
+  <a href="../index.html" id="fixed-red" class="navLinks-pink red-active"  title="view about me">ABOUT</a>
+  <a href="../index.html" id="fixed-green" class="navLinks-pink" title="view portfolio">PORTFOLIO</a>
+  <a href="../index.html" id="fixed-blue" class="navLinks-pink" title="view contact info">CONTACT</a>
+  <a href="javascript:void(0);"  class="icon" onclick="navMob()">
+    <div class="container" onclick="hamMenu(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+      </a>
+  </nav>
+</header>
+  <div class="container-wrap projectPage" id="red">
+    <div class="col-50">
+    <div class="text">
+     <h1>Lookbook microsite</h1>
+     <h2>Client</h2>
+     <p><a href="http://lookbookmackage.com" target="_blank" title="Go to lookbook">mackage.com</a>, an e-commerce website for luxury fashion brand</p>
+     <h2>The Challenge</h2>
+     <p>Create a responsive microsite showcasing Fall/Winter 18 fashion shoot for MACKAGE</p>
+     <h2>My role </h2>
+     <p>wireframing, code</p>
+        
+      <a href="#green">
+        <button class="anim-button" style="margin-right: 25px;"><span>Look Through</span> </button>
+      </a>      
+      </div>
+  </div>
+  <div class="col-50 introImg lookbookImg">
+  </div>
+  </div>
+
+  <div  id="green">
+    <div class="projectWrapper pinkBg">
+     <div class="textWrap">
+      <h2>Problem Statement</h2>  
+     <p>Typically done as a printed book only, retailers needed digital version of the book that is reponsive, while maintaining the look and feel of Mackage brand. </p>
+     </div>
+     <div class=" introImg booksImg">
+     </div>    
+    </div>
+
+    <div class="imgCntr row">    
+      <h2>Project Goals</h2> 
+      <div class="goalsWrapper">
+      <div class="goalNumber num1">1</div>
+      <div class="goalNumber num2">2</div>
+      <div class="goalNumber num3">3</div>
+      <div class="goalNumber num4">4</div>  
+      <p class="numText1">Create a lookbook experience</p>
+      <p class="numText2">Provide quick and clear results</p>         
+      <p class="numText3">Easy to navigate sticky menu for mobile </p>     
+      <p class="numText4">Easy to use and inconspicuous menu for desktop</p>    
+      </div> 
+    </div>
+    <div class="row pinkBg imgCntr">        
+        <img class="img50" src="../images/mk-microsite.jpg" alt="user journey">
+     </div>
+
+     <div class="projectWrapper">
+     <div class="textWrap">
+      <h2>Desktop Navigation</h2>     
+      <p>Created a static navigation menu that was convenient yet not intrusive to the design</p>
+      <p>A new user was able to scroll down and explore the products and the returning user was able to find products by categories</p>
+      
+     </div>
+     <div class="imgCntr">
+      <img class="img55 " src="../images/mk-microsite-menu-dskt2.jpg" alt="desktop menu"> 
+      <img class="img55 " src="../images/mk-microsite-menu-dskt1.jpg" alt="desktop menu">      
+     </div>    
+    </div>
+
+      <div class="projectWrapper pinkBg">
+         
+     <div class="textWrap ">
+      <h2>Mobile Navigation</h2>     
+      <p>Created an easily accessible navigation so the user is ablet to scroll through the products and find what the need through the menu</p>      
+     </div>       
+     <div class="imgCntr ">
+      <img class="img40 imgShadow" src="../images/mk-microsite-menu-mob1.jpg" alt="store locator icons"> 
+      <img class="img40 imgShadow" src="../images/mk-microsite-menu-mob2.jpg" alt="store locator icons">       
+     </div> 
+    </div>
+
+
+      
+ 
+ 
+  <div class="projectWrapperLast " >
+    <div class="prototype">
+      <!--<h2>Play the prototype</h2>-->
+    <img class="img45 imgShadow" src="../images/mk-microsite-mob-views.jpg" alt="Lookbook Mobile View">
+    </div>
+    <div class="nextProject">
+      <p>Next Project</p>
+      <a href="mk-website-redesign.html" class="next-project pulse">Mackage - Website Redesign > </a>
+    </div>
+  </div>
+  <footer>
+    <h6>Copyright @KatiaByDesign 2018</h6>
+  </footer>
+</div>
+
+
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    //onclick event
+    $("a").on('click', function(event){
+      if(this.hash !== ""){
+        //prevent default
+        event.preventDefault();
+        //create an object
+        var hash = this.hash;
+        //animate with jquery
+        $('html, body').animate({
+          scrollTop:$(hash).offset().top
+        }, 800, function(){
+          window.location.hash = hash;        
+        });
+      }
+    });
+  });
+</script>
+<script type="text/javascript">
+  $.fn.isInViewport = function() {
+  var elementTop = $(this).offset().top;
+  var elementBottom = elementTop + $(this).outerHeight();
+
+  var viewportTop = $(window).scrollTop();
+  var viewportBottom = viewportTop + $(window).height();
+
+  return elementBottom > viewportTop && elementTop < viewportBottom;
+};
+
+$(window).on('resize scroll', function() {
+  $('.container-wrap').each(function() {
+      var activeColor = $(this).attr('id');
+    if ($(this).isInViewport()) {
+      $('#fixed-' + activeColor).addClass(activeColor + '-active');
+    } else {
+      $('#fixed-' + activeColor).removeClass(activeColor + '-active');
+    }
+  });
+});
+</script>
+</body>
+</html>

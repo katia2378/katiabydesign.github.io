@@ -15,6 +15,19 @@
   	color: #dc3745;
 }
 
+div.logo{
+  width:10%;
+  float:left;
+  margin-left:20px; 
+}
+
+a.logo{
+  font-family: 'Cinzel Decorative', cursive;
+  text-decoration: none;
+  font-size: 30px;
+  color: #dc3745;
+}
+
 p.logo{
   font-family: 'Cinzel Decorative', cursive;
   color: #dc3745;
@@ -122,6 +135,7 @@ article.contact{
   float: left;
   height: 100%;
   padding: 2% 20px 20px 20px;
+  padding: 70px 20px 20px;
 }
 
 section{
@@ -208,12 +222,7 @@ button.anim-button:hover span:after{
 
 /*MAIN PAGE*/
 
-div.main-page{
-	  width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    /*padding: 100px 0 10px 0;*/    
-}
+
 
 div.about{
   padding: 0;
@@ -221,45 +230,67 @@ div.about{
 
 .animated-text{
     text-align: left;
-	  position: absolute;
-    top: 13%;
     width: 50%;
     min-width: 500px;
     left: 4%;
+    padding: 70px 0 30px 0;    
 }
 
+header{
+  padding: 0;
+  height:55px;
+  position: fixed;
+  border-bottom: 1px solid black;
+  width: 100%;
+  background-color: #FFF;
+  z-index: 99999;
+
+}
   /*NAVIGATION MENU*/
   .topnav {
       overflow: hidden;
       background-color: #FFF;
-      border-bottom: 1px solid #000;
-      /*position: fixed;
-      width: 100%;
-      z-index: 1000;
-      top: 0;*/
   }
 
   .topnav a {
     float: left;
     display: block;
-    color: #000;
+    color: #676559;
     text-align: center;
     padding: 14px 50px;
     text-decoration: none;
     font-size: 17px;
   }
 
+  #blue a{color:#676559;
+  
+}
+
   .splash-font{
   	font-family: 'Cinzel Decorative', cursive;
   }
 
   .topnav a:hover {
-      color: #ccc;
+      color: #dc3745;
   }
 
   .topnav .icon {
     display: none;
   }
+
+a.red-active {
+  color: #dc3745;  
+}
+
+a.green-active {
+  color: #dc3745;
+}
+
+a.blue-active {
+  color: #dc3745;
+}
+
+
 
     	/*HANMURGER MENU*/
     	.container {
@@ -291,7 +322,7 @@ div.about{
 
 .portfolio{
   background-color: #dc374512;
-  padding-bottom: 40px;
+  padding: 70px 0 30px 0;   
 }
 
 div.bg-image{
@@ -413,7 +444,7 @@ img.avatar{
 }
 
 .text-white{
-  color: #FFF;
+  color: #FFF !important;
 }
 
 .bg-white{
@@ -432,6 +463,10 @@ h2.portfolio-title{
     font-family: 'Lato', sans-serif;
     letter-spacing: 20px;
     margin-bottom: 40px; 
+}
+
+a.underline{
+  text-decoration: underline ;
 }
 
 /*MEDIA QUERIES*/
@@ -492,6 +527,7 @@ section{
     min-width: 100%;
     left: 0;
     padding: 10px 20px 0 20px;
+
 }
 
 h2.portfolio-title {
@@ -500,7 +536,7 @@ h2.portfolio-title {
     }
 
   /*NAVIGATION MENU*/
-  .topnav a:not(:first-child) {display: none;}
+  /*.topnav a:not(:first-child) {display: none;}*/
   .topnav a.icon {
     float: right;
     display: block;
